@@ -70,6 +70,11 @@ const RightMenu = styled.div`
     padding: 10px;
     border-radius: 5px;
     color: white
+  };
+  @media (max-width: 600px) {
+    a{
+      font-size: 10px;
+    }
   }
 `;
 // const CustomMenu = styled(MenuIcon)``;

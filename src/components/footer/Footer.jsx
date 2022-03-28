@@ -20,23 +20,21 @@ const Footer = () => {
         <CenterMenu>
           <div>
           <h4>Majestic Capital Links</h4>
-
-<a href="#">Trade</a>
-<a href="#">Mansions</a>
-<a href="#">Earn</a>
-<a href="#">Districts</a>
-<a href="#">Majestic Trust</a>
-<a href="#">Treasure</a>
+          <a href="#">Trade</a>
+          <a href="#">Mansions</a>
+          <a href="#">Earn</a>
+          <a href="#">Districts</a>
+          <a href="#">Majestic Trust</a>
+          <a href="#">Treasure</a>
           </div>
          
           <div>
-          <h4>Contact US</h4>
-
-<p>+1 123 400 5467</p>
-<p>ammarafzal075@gmail.com</p>
-<p>Address goes here</p>
-
+            <h3>Contact US</h3>
+            <p>+1 123 400 5467</p>
+            <p>ammarafzal075@gmail.com</p>
+            <p>Address goes here</p>
           </div>
+
         </CenterMenu>
         <RightMenu>
             <h4>Majestic Capital Instagram</h4>
@@ -80,18 +78,22 @@ const Container = styled.div`
   left: 0;
   right: 0;
   background: black;
-  color: white  
+  color: white
+
 `;
 
 const RightMenu = styled.div`
   width: 30%;
   text-align: center;
+  @media (max-width: 600px) {
+      display: none;
+  }
 `;
 const LeftMenu = styled.div`
 
   width: 30%;
   text-align: center;
-  div{
+  div{  
     a{
       margin: 10px;
       color: silver
@@ -101,6 +103,11 @@ const LeftMenu = styled.div`
     font-size: 12px
     text-align: left;
     color: silver;
+  }
+  @media (max-width: 600px) {
+    width: 70%;
+
+    text-align: right;
   }
 `;
 const CenterMenu = styled.div`
@@ -121,5 +128,17 @@ const CenterMenu = styled.div`
     justify-content: left;
     align-items:left;
     color: silver
+  }
+  @media (max-width: 600px) {
+    width: 70%;
+    display: flex;
+    text-align: right;
+    p{
+      text-align: right;
+    }
+    justify-content: right;
+    a,h4{
+      display:none;
+    }
   }
 `;
