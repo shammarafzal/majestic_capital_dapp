@@ -72,7 +72,7 @@ const Footer = () => {
 export default Footer
 
 const Container = styled.div`
-  min-height: 250px;
+  min-height: 200px;
   display: flex;
   align-items: center;
   padding: 0 20px;

@@ -1,0 +1,247 @@
+/* body {
+  background-color: #eeeeee;
+  font-family: Arial;
+} */
+.container {
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 500px;
+  height: 700px;
+  border-radius: 30px;
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+}
+
+.card input {
+  display: none;
+}
+.card label {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 15px 25px;
+  color: black;
+  /* margin-bottom: -1px; */
+  /* margin-left: -1px; */
+}
+
+.card label:hover {
+  /* color: #888; */
+  cursor: pointer;
+}
+.card input:checked + label {
+  position: relative;
+  color: #000;
+  /* background: #eeeeee; */
+  border: 1px solid #bbb;
+  /* border-bottom: 1px solid #fff; */
+  border-radius: 15px 15px 0px 15px;
+}
+.card input:checked + label:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  /* box-shadow: 0 0 15px #939393; */
+}
+#content1,
+#content2 {
+  display: none;
+  border-top: 1px solid #bbb;
+  padding: 0;
+}
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2 {
+  display: block;
+  background-color: #eeeeee;
+  height: 620px;
+  width: 470px;
+  border: 1px solid gray;
+  border-radius: 15px;
+  /* box-shadow: 0 0 15px #939393; */
+  margin-top: 3px;
+  position: relative;
+}
+
+.from-card {
+  display: flex;
+  flex-direction: column;
+  /* width: 490px; */
+  height: 160px;
+  border-radius: 25px;
+  background-color: #fff;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.p {
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  color: #888;
+}
+
+.price-card {
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 15px;
+  color: #000;
+}
+
+.price {
+  color: #888;
+}
+
+.value {
+  font-size: larger;
+  color: var(--color-black);
+}
+.value-btm {
+  font-size: small;
+  color: var(--color-white);
+}
+
+.prices {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.desc {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.to-card {
+  display: flex;
+  flex-direction: column;
+  /* width: 490px; */
+  height: 370px;
+  border-radius: 25px;
+  background-color: #fff;
+  margin-top: 15px;
+  margin-left: 5px;
+  margin-right: 5px;
+  z-index: -1;
+}
+
+.price-card-to {
+  background-color: #eeeeee;
+  padding: 10px;
+  width: 110px;
+  margin-left: 20px;
+  border-radius: 15px;
+  color: black;
+}
+
+.primary-card {
+  display: flex;
+  flex-direction: column;
+  /* width: 470px; */
+  height: 120px;
+  border-radius: 15px;
+  background-color: rgb(234, 234, 234);
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 5px;
+  border: 1px solid rgb(45, 247, 0);
+}
+
+.units-conversion {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+}
+.units {
+  font-size: large;
+  color: black;
+}
+.units-btm {
+  font-size: small;
+  color: var(--color-white);
+}
+.unit-result {
+  color: black;
+  margin-left: 15px;
+}
+.btm-items {
+  margin: 10px;
+}
+.primary-card-2 {
+  display: flex;
+  flex-direction: column;
+  /* width: 470px; */
+  height: 120px;
+  border-radius: 15px;
+  background-color: rgb(234, 234, 234);
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 5px;
+  /* border: 1px solid rgb(45, 247, 0); */
+}
+.selected {
+  width: 80px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  background-color: rgb(45, 247, 0);
+  border-radius: 15px 0px 15px 0px;
+}
+.circle {
+  position: absolute;
+  background-color: rgb(222, 222, 222);
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  margin-top: -10px;
+  margin-left: 220px;
+  z-index: 1000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.button {
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background: purple;
+}
+.wrapper-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* ========================== Media Queries (Medium Devices) ======================= */
+
+@media screen and (max-width: 1024px) {
+  .card {
+    margin: 10px;
+  }
+}
+
+/* ========================== Media Queries (Small Devices) ======================= */
+
+@media screen and (max-width: 600px) {
+  .card {
+    margin: 10px;
+  }
+}
